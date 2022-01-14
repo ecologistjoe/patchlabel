@@ -1,0 +1,485 @@
+body{
+    transition-duration:1s;
+    background-color:#fff;
+}
+
+body.loading {
+    opacity:0.5;
+    filter:blur(1px) grayscale(1);
+    -webkit-filter:blur(1px) grayscale(1);
+}
+
+#land-label {
+    width:1270px;
+    margin:10px auto;
+    font:normal 13px/16px Arial
+}
+
+#header {
+    margin:20px 0 0 0;
+    }
+
+#google {
+    margin-top:-10px;
+    float:right;
+}
+
+h1 {margin:10px 0;}
+    
+#message {
+    display:block;
+    clear:both;
+    overflow:hidden;
+    width:60%;
+    color:#04a;
+    height:1.3em;
+    margin:8px 0;
+    font-weight:bold;
+    }
+    
+/* User-Panel styles */
+h3#username {
+    font-size:1.1em;
+    color:#888;
+    margin:2px 0;
+}
+
+#signout { font-weight:bold;
+        text-decoration:none;
+        color:#aaa;
+        padding:0px 2px;
+        border:1px solid #aaa;
+        border-width:0px 1px;}
+#signout a:hover {color: #f63}
+
+
+/* Tasks-Panel styles (Projects & Plots) */
+
+#task_panel {
+    float:left;
+    margin:6px 0 0 0;
+    }
+    
+#project_id {
+    width:150px;
+    margin:0px 0px;
+    padding:2px;
+}
+#kml_download{
+    height:20px;
+    margin:2px;
+}
+#plot_list {
+    width:148px;
+    height:285px;
+    overflow:auto;
+    border:1px solid #ccc;
+    margin:5px 0px;
+    padding:2px 0;
+}
+.plotselect {
+    margin:0;
+    padding:2px 5px;
+    border:1px solid transparent;
+    border-width:1px 0;
+    cursor: pointer;
+    position:relative;
+
+}
+.selected_plot {
+    color:#04a;
+    background-color:#eee;
+    border-color:#ccc;
+    }
+.plotselect:hover{
+    border-color:#ccc;
+}
+#plot_list .iscomplete {
+    color:green;
+}
+#plot_list .iscomplete:before{
+    content: "\2713";
+    position:absolute;
+    right:2px;
+}
+
+/* Time Series Charts */
+
+#timeseries_panel {
+    display:block;
+    position:relative;
+    float:right;
+    overflow:hidden;
+    width:500px;
+    top:-14px;
+}
+#options {margin:0; padding:0;}
+
+#vegindex {
+    margin:0;
+    padding-left:10px;
+}
+#timeseries {
+    position:relative;
+    margin:0;
+    width:100%;
+    height:345px;
+    border-top:1px solid #888;
+    z-index:1;
+    }
+#timeseries_chart{
+    width:100%;
+    height:100%;
+}
+#chart_marker {
+    display:block;
+    position:absolute;
+    width:0px;
+    height:100%;
+    background-color:#888;
+    opacity:0.2;
+    top:0px;
+    left:40px;
+    pointer-events:none;
+}
+
+.tab{
+    display:inline-block;
+    position:relative;
+    z-index:0;
+    top:1px;
+    cursor:pointer;
+    font-weight:bold;
+    color:#888;
+    
+    margin:0;
+    border:1px solid #ccc;
+    border-color:#ccc #ccc #888 #ccc;
+    border-radius:5px 5px 0 0;
+    padding:2px 6px;
+    background-color:#ddd;
+}
+.tab_selected {
+    z-index:2;
+    color:#04a;
+    border-color:#888 #888 #fff #888;
+    background-color:#fff;
+}
+.tab:hover{
+    color:#04a;
+}
+    
+    
+/* Chips Control */ 
+#chip_panel {
+    clear:both;
+}
+#chip_panel label {
+    display:inline-block;
+    color:#555;
+    margin-left:10px;
+ }
+#zoom {
+    padding:0;
+    vertical-align:middle;
+    margin:0;
+}
+
+#chipstyle {
+    display:inline-block;
+    margin:0;
+    padding-left:30px;
+}
+
+#monthfilter {
+    float:right;
+    width:500px;
+    text-align:center;
+    vertical-align:top;
+}
+#monthfilter .toggle_button {
+    margin:0 0 ;
+}
+
+
+#carousel{
+    position:relative;
+    width:1280px;
+    height:325px;
+    border:1px solid #888;
+    border-width:1px 0;
+    overflow:hidden;
+}
+    
+#carousel .prev, #carousel .next {
+    display:block;
+    position:absolute;
+    width:20px;
+    height:25px;
+    z-index:20;
+    top:0;
+    border:1px solid #888;
+    border-width:0px 1px;
+    padding:150px 0;
+    background-color:#def;
+    vertical-align:middle;
+    text-align:center;
+}
+#carousel .prev:hover, #carousel .next:hover {
+    background-color:#bcd;
+    color:#04a;
+    cursor:pointer;
+}
+
+#carousel .prev { left:0;}
+#carousel .next { right:0;}
+
+#carousel .disabled {
+    color:#888;
+    background-color:#ccc;
+}
+#carousel .disabled:hover {
+    background-color:#ccc!important;
+    color:#888!important;
+    cursor:default;
+}
+#chips {
+    display:block;
+    position:relative;
+    left:-290px;
+    width:2180px;
+}
+
+#chips .chip:first-child {
+    width:0;
+}
+#chips .chip {
+    transition-duration:250ms;
+    position:relative;
+    display:inline-block;
+    text-align:center;
+    width:302px;
+    margin:3px;
+    overflow:hidden;
+    }
+
+#chips .chip img{
+    transition-duration:1s;
+    display:block;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:100%;
+    border:1px solid #888;
+    width:300px;
+    height:300px;
+}
+
+#chips .selected_chip img{
+    border-color: #36f;
+}
+#chips .selected_chip{
+    color: #04a;
+}
+
+
+#chips .chip figcaption {
+    display:block;
+    height:18px;
+    margin-top:2px;
+    font-weight:bold;
+}
+
+.patch_outline {
+    z-index:5;
+    position:absolute;
+    width:300px;
+    height:300px;
+    left:0;
+    top:0;
+    transition-duration:1s;
+}
+    
+.patch_outline * {
+    stroke:red;
+    fill:none;
+    transition-duration:1s;
+}
+
+.suppress {
+    transition-duration:250ms;
+    position:absolute;
+    opacity:0.3;
+    z-index:10;
+    width:14px;
+    height:14px;
+    top:5px;
+    left:280px;
+    color: red;
+    border:1px solid red;
+    text-align:center;
+    vertical-align:middle;
+    font:bold 10px/14px Arial;
+    background-color:#ccc;
+}
+.suppress:hover {
+    opacity:1;
+    cursor:pointer;
+}
+    
+/* Label Panel -- main form inputs */
+#label_panel {
+    overflow:hidden;
+    padding:0 5px;
+}
+
+#label_panel label {
+    display:block;
+    overflow:hidden;
+    margin:0 5px 5px 0;
+    color:#555;
+ }
+    
+#label_panel label .desc {
+    float:left;
+    width:80px;
+    text-align:right;
+    margin-right:5px;
+    line-height:1.3em;
+}
+
+#label_panel label select {
+    width:150px;
+    height:21px;
+}
+
+#change {
+    width:47%;
+    margin-right:2%;
+    float:left;
+}
+
+
+#change_tags{
+    text-align:center;
+    margin:10px;
+    padding:0 5px;
+}
+
+#change_certainty {
+    text-align:center;
+    margin:10px 0;
+}
+#change_certainty label.certainty_criterion {
+    display:inline-block;
+    padding:0;
+    margin:0;
+}
+#change_certainty .certainty_criterion + .certainty_criterion{
+    margin-left:5px;  
+}
+#change_certainty .hml_select_box {
+    top:3px;
+}
+
+#comments {
+    display:block;
+    width:98%;
+    height:153px;
+    padding:2px;
+    border:1px solid #ccc;
+}
+
+fieldset {
+    margin:0;
+    border:none;
+    border-top:1px solid #888;
+    padding:5px 1% 0 1%;
+}
+
+fieldset fieldset {
+    border-color:#ccc;
+}
+
+#land_after {
+    margin-top:10px;
+}
+
+fieldset legend {
+    height:17px;
+    font-weight:bold;
+}
+fieldset fieldset legend {
+    font-weight:normal;
+    font-style:italic;
+}
+    
+div.anchor {
+    position:relative;
+}
+    
+label.dominant {
+    position:absolute;
+    width:100%;
+    text-align:right;
+    top:-2em;
+}
+
+label.dominant .toggle_button {
+
+    margin:0 10px;
+    background-color:#fff
+}
+    
+    
+
+.hml_select {
+    display:inline-block;
+}
+.hml_select_box{
+    float:left;
+    position:relative;
+    cursor:pointer;
+    top:2px;
+    margin-left:-1px;
+    display:inline-block;
+    width:10px;
+    height:14px;
+    border:1px solid #ccc;
+    background-color:#eee;
+}
+
+.hml_high{ background-color:#06c}
+.hml_medium {background-color:#390}
+.hml_low {background-color:#f63}
+
+
+.toggle_button {
+    font-weight:bold;
+    color:#888;
+    display:inline-block;
+    padding:1px 3px 2px 3px;
+    border:1px solid #ccc;
+    margin:2px;
+}
+.toggle_button_selected {
+    z-index:2;
+    color:#04a;
+    border-color:#04a;
+    background-color:#def !important;
+}
+.toggle_button:hover {
+    cursor:pointer;
+    color:#04a;
+}
+    
+/* Experimental CSS for making the images pixelated */
+.pixelated {
+    image-rendering:optimizeSpeed;             /* Legal fallback */
+    image-rendering:-moz-crisp-edges;          /* Firefox        */
+    image-rendering:-o-crisp-edges;            /* Opera          */
+    image-rendering:-webkit-optimize-contrast; /* Safari         */
+    image-rendering:optimize-contrast;         /* CSS3 Proposed  */
+    image-rendering:crisp-edges;               /* CSS4 Proposed  */
+    image-rendering:pixelated;                 /* CSS4 Proposed  */
+    -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
+}
